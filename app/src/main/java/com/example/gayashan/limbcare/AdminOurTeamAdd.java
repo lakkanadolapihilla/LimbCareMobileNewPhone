@@ -1,7 +1,6 @@
 package com.example.gayashan.limbcare;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,7 +42,7 @@ public class AdminOurTeamAdd extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseHelper mHelper = new DatabaseHelper(getApplicationContext());
+                EmpDatabaseHelper mHelper = new EmpDatabaseHelper(getApplicationContext());
 
                 SQLiteDatabase db = mHelper.getWritableDatabase();
 
@@ -51,13 +50,13 @@ public class AdminOurTeamAdd extends AppCompatActivity {
                     Toast.makeText(AdminOurTeamAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContentValues values = new ContentValues();
-                    values.put(DatabaseHelper.TABLE_COLUMN2, editText3.getText().toString());
-                    values.put(DatabaseHelper.TABLE_COLUMN3, editText4.getText().toString());
-                    values.put(DatabaseHelper.TABLE_COLUMN4, editText5.getText().toString());
-                    values.put(DatabaseHelper.TABLE_COLUMN5, editText6.getText().toString());
-                    values.put(DatabaseHelper.TABLE_COLUMN6, editText7.getText().toString());
-                    values.put(DatabaseHelper.TABLE_COLUMN7, editText8.getText().toString());
-                    long newRowId = db.insert(DatabaseHelper.TABLE_NAME, null, values);
+                    values.put(EmpDatabaseHelper.TABLE_COLUMN2, editText3.getText().toString());
+                    values.put(EmpDatabaseHelper.TABLE_COLUMN3, editText4.getText().toString());
+                    values.put(EmpDatabaseHelper.TABLE_COLUMN4, editText5.getText().toString());
+                    values.put(EmpDatabaseHelper.TABLE_COLUMN5, editText6.getText().toString());
+                    values.put(EmpDatabaseHelper.TABLE_COLUMN6, editText7.getText().toString());
+                    values.put(EmpDatabaseHelper.TABLE_COLUMN7, editText8.getText().toString());
+                    long newRowId = db.insert(EmpDatabaseHelper.TABLE_NAME, null, values);
 
                     if (newRowId == 0) {
                         Toast.makeText(getApplicationContext(), "Data Not Inserted", Toast.LENGTH_SHORT).show();
