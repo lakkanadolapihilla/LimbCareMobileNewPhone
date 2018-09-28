@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class admin_our_team extends AppCompatActivity {
+public class AdminOurTeam extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -50,7 +50,7 @@ public class admin_our_team extends AppCompatActivity {
 //
 //        }
 
-        adapter = new adapter(teamCardList, this);
+        adapter = new Adapter(teamCardList, this);
 
         recyclerView.setAdapter(adapter);
 //
@@ -67,7 +67,7 @@ public class admin_our_team extends AppCompatActivity {
         fbtnourteam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(admin_our_team.this, admin_our_team_add.class));
+                startActivity(new Intent(AdminOurTeam.this, AdminOurTeamAdd.class));
             }
         });
 

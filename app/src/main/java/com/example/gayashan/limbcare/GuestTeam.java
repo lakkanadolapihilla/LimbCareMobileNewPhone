@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class guest_team extends AppCompatActivity {
+public class GuestTeam extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
 
@@ -36,7 +36,7 @@ public class guest_team extends AppCompatActivity {
 
         teamCardList = new ArrayList<>();
 
-        adapter = new adapter(teamCardList, this);
+        adapter = new Adapter(teamCardList, this);
 
         recyclerView.setAdapter(adapter);
 

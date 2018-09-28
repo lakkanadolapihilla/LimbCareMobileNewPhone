@@ -4,4 +4,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="topic_str">Topic.</string>
+    <string name="add_str">Add</string>
+    <string name="cancel_str">Cancel</string>
+    <string name="guest_str">GUEST</string>
+    <string name="admin_str">ADMIN</string>
+    <string name="welcome_to_limbcare_str">Welcome to LimbCare !</string>
+    <string name="services_str">Services</string>
+    <string name="notice_str">Notices</string>
+    <string name="guest_home_str">Guest Home</string>
+    <string name="galley">Galley</string>
+    <string name="add_to_service_str">Add to Service</string>
+    <string name="add_to_team_str">Add to Team</string>
+    <string name="add_to_notice_str">Add to Notice</string>
+    <string name="description_str">Description...</string>
+    <string name="team_str">Team</string>
+    <string name="our_team_str">Our Team</string>
+    <string name="admin_home_str">Admin Home</string>
 </resources>

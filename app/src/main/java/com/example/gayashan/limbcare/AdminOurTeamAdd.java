@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class admin_our_team_add extends AppCompatActivity {
+public class AdminOurTeamAdd extends AppCompatActivity {
     EditText editText3, editText4, editText5, editText6, editText7, editText8;
 
 
@@ -48,7 +48,7 @@ public class admin_our_team_add extends AppCompatActivity {
                 SQLiteDatabase db = mHelper.getWritableDatabase();
 
                 if (editText3.getText().toString().equals("") || editText4.getText().toString().equals("") || editText5.getText().toString().equals("") || editText6.getText().toString().equals("") || editText7.getText().toString().equals("")|| editText8.getText().toString().equals("")) {
-                    Toast.makeText(admin_our_team_add.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminOurTeamAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContentValues values = new ContentValues();
                     values.put(DatabaseHelper.TABLE_COLUMN2, editText3.getText().toString());
@@ -70,17 +70,4 @@ public class admin_our_team_add extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void finish() {
-        Intent data = new Intent();
-        data.putExtra("value", editText3.getText().toString());
-        data.putExtra("value", editText4.getText().toString());
-        data.putExtra("value", editText5.getText().toString());
-        data.putExtra("value", editText6.getText().toString());
-        data.putExtra("value", editText7.getText().toString());
-        data.putExtra("value", editText8.getText().toString());
-        setResult(RESULT_OK, data);
-
-        super.finish();
-    }
 }

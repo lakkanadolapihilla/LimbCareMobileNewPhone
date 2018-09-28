@@ -3,7 +3,7 @@ package com.example.gayashan.limbcare;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class guest_service extends AppCompatActivity {
+public class GuestService extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

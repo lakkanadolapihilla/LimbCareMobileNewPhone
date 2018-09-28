@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".guest_service">
+    tools:context=".GuestService">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Services"
+        android:text="@string/services_str"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"

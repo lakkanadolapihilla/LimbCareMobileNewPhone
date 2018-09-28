@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class admin_login extends AppCompatActivity {
+public class AdminLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class admin_login extends AppCompatActivity {
         /*btncancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(admin_login.this, welcome.class));
+                startActivity(new Intent(AdminLogin.this, Welcome.class));
             }
         });*/
 
@@ -35,7 +35,7 @@ public class admin_login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(admin_login.this, admin_home.class));
+                startActivity(new Intent(AdminLogin.this, AdminHome.class));
             }
         });
     }

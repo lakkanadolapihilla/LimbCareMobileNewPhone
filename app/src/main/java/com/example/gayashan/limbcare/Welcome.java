@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class welcome extends AppCompatActivity {
+public class Welcome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class welcome extends AppCompatActivity {
         btnadmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(welcome.this, admin_login.class));
+                startActivity(new Intent(Welcome.this, AdminLogin.class));
             }
         });
 
@@ -26,7 +26,7 @@ public class welcome extends AppCompatActivity {
         btnguest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(welcome.this, guest_home.class));
+                startActivity(new Intent(Welcome.this, GuestHome.class));
             }
         });
 

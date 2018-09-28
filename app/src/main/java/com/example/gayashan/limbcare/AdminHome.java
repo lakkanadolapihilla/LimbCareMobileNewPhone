@@ -6,29 +6,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class guest_home extends AppCompatActivity {
+public class AdminHome extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guest_home);
+        setContentView(R.layout.activity_admin_home);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ImageButton imgbtngallery = findViewById(R.id.imageButton2);
+        ImageButton imgbtngalley = findViewById(R.id.imageButton2);
 
-        imgbtngallery.setOnClickListener(new View.OnClickListener() {
+        imgbtngalley.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(guest_home.this, guest_galley.class));
+                startActivity(new Intent(AdminHome.this, AdminGalley.class));
             }
         });
 
-        ImageButton imagebtnteam = findViewById(R.id.imageButton3);
+        ImageButton imgbtnourteam = findViewById(R.id.imageButton3);
 
-        imagebtnteam.setOnClickListener(new View.OnClickListener() {
+        imgbtnourteam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(guest_home.this, guest_team.class));
+                startActivity(new Intent(AdminHome.this, AdminOurTeam.class));
             }
         });
 
@@ -37,16 +37,16 @@ public class guest_home extends AppCompatActivity {
         imgbtnservice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(guest_home.this, guest_service.class));
+                startActivity(new Intent(AdminHome.this, AdminService.class));
             }
         });
 
-        ImageButton imgbtnnotice = findViewById(R.id.imageButton4);
+        ImageButton imgadminnotice = findViewById(R.id.imageButton4);
 
-        imgbtnnotice.setOnClickListener(new View.OnClickListener() {
+        imgadminnotice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(guest_home.this, guest_notice.class));
+                startActivity(new Intent(AdminHome.this, AdminNotice.class));
             }
         });
     }

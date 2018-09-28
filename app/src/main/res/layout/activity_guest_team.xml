@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".guest_team">
+    tools:context=".GuestTeam">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Our Team"
+            android:text="@string/our_team_str"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/recycler_padding">
 
         </android.support.v7.widget.RecyclerView>
 

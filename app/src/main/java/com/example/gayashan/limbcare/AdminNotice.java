@@ -1,24 +1,25 @@
 package com.example.gayashan.limbcare;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-public class admin_service_add extends AppCompatActivity {
+public class AdminNotice extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_service_add);
+        setContentView(R.layout.activity_admin_notice);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button btncancel = findViewById(R.id.button3);
+        FloatingActionButton fbtnnotice = findViewById(R.id.fab);
 
-        btncancel.setOnClickListener(new View.OnClickListener() {
+        fbtnnotice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(AdminNotice.this, AdminNoticeAdd.class));
             }
         });
     }

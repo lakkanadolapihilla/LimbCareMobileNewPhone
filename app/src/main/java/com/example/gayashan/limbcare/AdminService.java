@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class admin_service extends AppCompatActivity {
+public class AdminService extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class admin_service extends AppCompatActivity {
         fbtnservice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(admin_service.this, admin_service_add.class));
+                startActivity(new Intent(AdminService.this, AdminServiceAdd.class));
             }
         });
     }

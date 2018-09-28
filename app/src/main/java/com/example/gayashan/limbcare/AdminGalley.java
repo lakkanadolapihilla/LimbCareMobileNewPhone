@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class admin_galley extends AppCompatActivity {
+public class AdminGalley extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class admin_galley extends AppCompatActivity {
         fbtngalley.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(admin_galley.this, admin_gallery_add.class));
+                startActivity(new Intent(AdminGalley.this, AdminGalleryAdd.class));
             }
         });
     }
