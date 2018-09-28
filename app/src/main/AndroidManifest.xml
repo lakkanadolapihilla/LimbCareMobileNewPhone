@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gayashan.limbcare">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".welcome">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.welcome" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".admin_login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.welcome" />
+        </activity>
+        <activity android:name=".guest_login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.guest_login" />
+        </activity>
+        <activity android:name=".admin_home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_home" />
+        </activity>
+        <activity android:name=".guest_home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.guest_home" />
+        </activity>
+        <activity android:name=".admin_service">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_service" />
+        </activity>
+        <activity android:name=".admin_notice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_notice" />
+        </activity>
+        <activity android:name=".admin_galley">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_galley" />
+        </activity>
+        <activity android:name=".admin_our_team">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_our_team" />
+        </activity>
+        <activity android:name=".guest_service">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.guest_service" />
+        </activity>
+        <activity android:name=".guest_notice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.guest_notice" />
+        </activity>
+        <activity android:name=".guest_galley">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.guest_galley" />
+        </activity>
+        <activity android:name=".guest_team">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.guest_team" />
+        </activity>
+        <activity android:name=".admin_gallery_add">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_gallery_add" />
+        </activity>
+        <activity android:name=".admin_notice_add">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_notice_add" />
+        </activity>
+        <activity android:name=".admin_service_add">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_service_add" />
+        </activity>
+        <activity android:name=".admin_our_team_add">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.admin_our_team_add" />
+        </activity>
+        <activity android:name=".drawer"></activity>
+    </application>
+
+</manifest>
