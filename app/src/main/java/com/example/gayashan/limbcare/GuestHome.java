@@ -14,7 +14,7 @@ public class GuestHome extends AppCompatActivity {
         setContentView(R.layout.activity_guest_home);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ImageButton imgbtngallery = findViewById(R.id.imageButton2);
+        ImageButton imgbtngallery = findViewById(R.id.imgbtnGallery);
 
         imgbtngallery.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,7 +23,7 @@ public class GuestHome extends AppCompatActivity {
             }
         });
 
-        ImageButton imagebtnteam = findViewById(R.id.imageButton3);
+        ImageButton imagebtnteam = findViewById(R.id.imgbtnTeam);
 
         imagebtnteam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +32,7 @@ public class GuestHome extends AppCompatActivity {
             }
         });
 
-        ImageButton imgbtnservice = findViewById(R.id.imageButton);
+        ImageButton imgbtnservice = findViewById(R.id.imgbtnService);
 
         imgbtnservice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class GuestHome extends AppCompatActivity {
             }
         });
 
-        ImageButton imgbtnnotice = findViewById(R.id.imageButton4);
+        ImageButton imgbtnnotice = findViewById(R.id.imgbtnNotice);
 
         imgbtnnotice.setOnClickListener(new View.OnClickListener() {
             @Override

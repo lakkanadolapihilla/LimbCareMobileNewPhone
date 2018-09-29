@@ -13,7 +13,7 @@ public class Welcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        Button btnadmin = findViewById(R.id.button2);
+        Button btnadmin = findViewById(R.id.btnAdmin);
         btnadmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -21,7 +21,7 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
-        Button btnguest = findViewById(R.id.button);
+        Button btnguest = findViewById(R.id.btnGuest);
 
         btnguest.setOnClickListener(new View.OnClickListener() {
             @Override

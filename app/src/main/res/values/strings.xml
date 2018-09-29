@@ -31,4 +31,5 @@
     <string name="first_name_str">First Name</string>
     <string name="email_str">Email</string>
     <string name="birthday_str">Birthday</string>
+    <string name="guest_login_str">Guest Login</string>
 </resources>

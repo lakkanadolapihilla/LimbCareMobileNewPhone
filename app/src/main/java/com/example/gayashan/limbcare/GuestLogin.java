@@ -14,7 +14,7 @@ public class GuestLogin extends AppCompatActivity {
         setContentView(R.layout.activity_guest_login);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button btncancel = findViewById(R.id.button3);
+        Button btncancel = findViewById(R.id.btnCancel);
 
         btncancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,7 +23,7 @@ public class GuestLogin extends AppCompatActivity {
             }
         });
 
-        Button btnlogin = findViewById(R.id.button4);
+        Button btnlogin = findViewById(R.id.btnLogin);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
