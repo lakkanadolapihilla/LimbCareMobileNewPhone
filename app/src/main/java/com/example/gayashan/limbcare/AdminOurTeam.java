@@ -14,6 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapters.TeamAdapter;
+
 public class AdminOurTeam extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -50,7 +52,7 @@ public class AdminOurTeam extends AppCompatActivity {
 //
 //        }
 
-        adapter = new Adapter(teamCardList, this);
+        adapter = new TeamAdapter(teamCardList, this);
 
         recyclerView.setAdapter(adapter);
 //
@@ -116,7 +118,7 @@ public class AdminOurTeam extends AppCompatActivity {
 //                StudyMateContractor.NoteEntry._ID + " DESC";
 
         Cursor cursor = db.query(
-                EmpDatabaseHelper.LIMBCARE,   // The table to query
+                EmpDatabaseHelper.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 null,              // The columns for the WHERE clause
                 null,          // The values for the WHERE clause

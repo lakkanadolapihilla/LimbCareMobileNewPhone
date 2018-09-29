@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
         <EditText
-            android:id="@+id/description"
+            android:id="@+id/txtDescription"
             android:layout_width="321dp"
             android:layout_height="239dp"
             android:layout_marginStart="8dp"
@@ -106,7 +106,7 @@
             app:srcCompat="@drawable/artificiallogo" />
 
         <EditText
-            android:id="@+id/topic"
+            android:id="@+id/txtTopic"
             android:layout_width="321dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

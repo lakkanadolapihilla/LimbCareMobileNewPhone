@@ -1,4 +1,4 @@
-package com.example.gayashan.limbcare;
+package adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,14 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.gayashan.limbcare.R;
+import com.example.gayashan.limbcare.TeamCard;
+
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
+public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder>{
 
     private List<TeamCard> cardItems;
     private Context context;
 
-    public Adapter(List<TeamCard> cardItems, Context context) {
+    public TeamAdapter(List<TeamCard> cardItems, Context context) {
         this.cardItems = cardItems;
         this.context = context;
     }

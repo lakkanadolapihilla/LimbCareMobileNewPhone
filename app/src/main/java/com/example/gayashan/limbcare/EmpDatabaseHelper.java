@@ -8,7 +8,7 @@ import static java.sql.Types.BLOB;
 
 public class EmpDatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "limbcare";
-    public static final String LIMBCARE = "employee";
+    public static final String TABLE_NAME = "employee";
     public static final String EMP_ID = "emp_id";
     public static final String EMP_FNAME = "emp_fname";
     public static final String EMP_LNAME = "emp_lname";
@@ -19,12 +19,12 @@ public class EmpDatabaseHelper extends SQLiteOpenHelper {
     public static final String EMP_PHOTO = "emp_photo";
 
     public EmpDatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(" create table "+LIMBCARE+" (" +
+        db.execSQL(" create table "+TABLE_NAME+" (" +
                 EMP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 EMP_FNAME + " TEXT, " +
                 EMP_LNAME + " TEXT, " +

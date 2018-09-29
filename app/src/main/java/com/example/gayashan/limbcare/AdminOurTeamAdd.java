@@ -20,6 +20,16 @@ public class AdminOurTeamAdd extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button btncancel = findViewById(R.id.btnCancel);
+
+        btncancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                finish();
+            }
+        });
+
         Button btnAdd = findViewById(R.id.btnAdd);
         editTextFName = findViewById(R.id.txtFName);
         editTextLname = findViewById(R.id.txtLName);
@@ -30,14 +40,7 @@ public class AdminOurTeamAdd extends AppCompatActivity {
 
 
 
-        btncancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-
-                finish();
-            }
-        });
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +59,7 @@ public class AdminOurTeamAdd extends AppCompatActivity {
                     values.put(EmpDatabaseHelper.EMP_JOB, editTextJob.getText().toString());
                     values.put(EmpDatabaseHelper.EMP_EMAIL, editTextEMail.getText().toString());
                     values.put(EmpDatabaseHelper.EMP_BDAY, editTextBDay.getText().toString());
-                    long newRowId = db.insert(EmpDatabaseHelper.LIMBCARE, null, values);
+                    long newRowId = db.insert(EmpDatabaseHelper.TABLE_NAME, null, values);
 
                     if (newRowId == 0) {
                         Toast.makeText(getApplicationContext(), "Data Not Inserted", Toast.LENGTH_SHORT).show();

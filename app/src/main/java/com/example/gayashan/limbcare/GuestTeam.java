@@ -11,6 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapters.TeamAdapter;
+
 public class GuestTeam extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -36,7 +38,7 @@ public class GuestTeam extends AppCompatActivity {
 
         teamCardList = new ArrayList<>();
 
-        adapter = new Adapter(teamCardList, this);
+        adapter = new TeamAdapter(teamCardList, this);
 
         recyclerView.setAdapter(adapter);
 
@@ -74,7 +76,7 @@ public class GuestTeam extends AppCompatActivity {
                 EmpDatabaseHelper.EMP_BDAY,
         };
         Cursor cursor = db1.query(
-                EmpDatabaseHelper.LIMBCARE,   // The table to query
+                EmpDatabaseHelper.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 null,              // The columns for the WHERE clause
                 null,          // The values for the WHERE clause
