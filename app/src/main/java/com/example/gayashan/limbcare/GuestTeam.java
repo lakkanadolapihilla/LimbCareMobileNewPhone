@@ -65,16 +65,16 @@ public class GuestTeam extends AppCompatActivity {
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
         String[] projection = {
-                EmpDatabaseHelper.TABLE_COLUMN1,
-                EmpDatabaseHelper.TABLE_COLUMN2,
-                EmpDatabaseHelper.TABLE_COLUMN3,
-                EmpDatabaseHelper.TABLE_COLUMN4,
-                EmpDatabaseHelper.TABLE_COLUMN5,
-                EmpDatabaseHelper.TABLE_COLUMN6,
-                EmpDatabaseHelper.TABLE_COLUMN7,
+                EmpDatabaseHelper.EMP_ID,
+                EmpDatabaseHelper.EMP_FNAME,
+                EmpDatabaseHelper.EMP_LNAME,
+                EmpDatabaseHelper.EMP_NIC,
+                EmpDatabaseHelper.EMP_JOB,
+                EmpDatabaseHelper.EMP_EMAIL,
+                EmpDatabaseHelper.EMP_BDAY,
         };
         Cursor cursor = db1.query(
-                EmpDatabaseHelper.TABLE_NAME,   // The table to query
+                EmpDatabaseHelper.LIMBCARE,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 null,              // The columns for the WHERE clause
                 null,          // The values for the WHERE clause

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class AdminOurTeamAdd extends AppCompatActivity {
-    EditText editText3, editText4, editText5, editText6, editText7, editText8;
+    EditText editTextFName, editTextLname, editTextNIC, editTextJob, editTextEMail, editTextBDay;
 
 
     @Override
@@ -19,14 +19,14 @@ public class AdminOurTeamAdd extends AppCompatActivity {
         setContentView(R.layout.activity_admin_our_team_add);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button btncancel = findViewById(R.id.button3);
+        Button btncancel = findViewById(R.id.btnCancel);
         Button btnAdd = findViewById(R.id.btnAdd);
-        editText3 = findViewById(R.id.editText3);
-        editText4 = findViewById(R.id.editText4);
-        editText5 = findViewById(R.id.editText5);
-        editText6 = findViewById(R.id.editText6);
-        editText7 = findViewById(R.id.editText7);
-        editText8 = findViewById(R.id.editText8);
+        editTextFName = findViewById(R.id.txtFName);
+        editTextLname = findViewById(R.id.txtLName);
+        editTextNIC = findViewById(R.id.txtNIC);
+        editTextJob = findViewById(R.id.txtJob);
+        editTextEMail = findViewById(R.id.txtEMail);
+        editTextBDay = findViewById(R.id.txtBday);
 
 
 
@@ -46,17 +46,17 @@ public class AdminOurTeamAdd extends AppCompatActivity {
 
                 SQLiteDatabase db = mHelper.getWritableDatabase();
 
-                if (editText3.getText().toString().equals("") || editText4.getText().toString().equals("") || editText5.getText().toString().equals("") || editText6.getText().toString().equals("") || editText7.getText().toString().equals("")|| editText8.getText().toString().equals("")) {
+                if (editTextFName.getText().toString().equals("") || editTextLname.getText().toString().equals("") || editTextNIC.getText().toString().equals("") || editTextJob.getText().toString().equals("") || editTextEMail.getText().toString().equals("")|| editTextBDay.getText().toString().equals("")) {
                     Toast.makeText(AdminOurTeamAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContentValues values = new ContentValues();
-                    values.put(EmpDatabaseHelper.TABLE_COLUMN2, editText3.getText().toString());
-                    values.put(EmpDatabaseHelper.TABLE_COLUMN3, editText4.getText().toString());
-                    values.put(EmpDatabaseHelper.TABLE_COLUMN4, editText5.getText().toString());
-                    values.put(EmpDatabaseHelper.TABLE_COLUMN5, editText6.getText().toString());
-                    values.put(EmpDatabaseHelper.TABLE_COLUMN6, editText7.getText().toString());
-                    values.put(EmpDatabaseHelper.TABLE_COLUMN7, editText8.getText().toString());
-                    long newRowId = db.insert(EmpDatabaseHelper.TABLE_NAME, null, values);
+                    values.put(EmpDatabaseHelper.EMP_FNAME, editTextFName.getText().toString());
+                    values.put(EmpDatabaseHelper.EMP_LNAME, editTextLname.getText().toString());
+                    values.put(EmpDatabaseHelper.EMP_NIC, editTextNIC.getText().toString());
+                    values.put(EmpDatabaseHelper.EMP_JOB, editTextJob.getText().toString());
+                    values.put(EmpDatabaseHelper.EMP_EMAIL, editTextEMail.getText().toString());
+                    values.put(EmpDatabaseHelper.EMP_BDAY, editTextBDay.getText().toString());
+                    long newRowId = db.insert(EmpDatabaseHelper.LIMBCARE, null, values);
 
                     if (newRowId == 0) {
                         Toast.makeText(getApplicationContext(), "Data Not Inserted", Toast.LENGTH_SHORT).show();

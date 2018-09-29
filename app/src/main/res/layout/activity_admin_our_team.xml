@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Heading"
         android:layout_width="286dp"
         android:layout_height="41dp"
         android:layout_marginBottom="8dp"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="289dp"
         android:layout_height="65dp"
         android:layout_marginBottom="8dp"

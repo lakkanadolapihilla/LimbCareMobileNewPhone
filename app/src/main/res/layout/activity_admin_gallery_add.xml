@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCancel"
         android:layout_width="95dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.911" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnAdd"
         android:layout_width="95dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.911" />
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Heading"
         android:layout_width="286dp"
         android:layout_height="41dp"
         android:layout_marginBottom="8dp"

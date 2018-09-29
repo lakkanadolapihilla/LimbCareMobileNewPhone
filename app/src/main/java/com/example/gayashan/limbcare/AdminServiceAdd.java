@@ -13,7 +13,7 @@ public class AdminServiceAdd extends AppCompatActivity {
         setContentView(R.layout.activity_admin_service_add);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button btncancel = findViewById(R.id.button3);
+        Button btncancel = findViewById(R.id.btnCancel);
 
         btncancel.setOnClickListener(new View.OnClickListener() {
             @Override
