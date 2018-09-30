@@ -45,7 +45,7 @@ public class AdminOurTeamAdd extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EmpDatabaseHelper mHelper = new EmpDatabaseHelper(getApplicationContext());
+                DatabaseHelper mHelper = new DatabaseHelper(getApplicationContext());
 
                 SQLiteDatabase db = mHelper.getWritableDatabase();
 
@@ -53,13 +53,13 @@ public class AdminOurTeamAdd extends AppCompatActivity {
                     Toast.makeText(AdminOurTeamAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContentValues values = new ContentValues();
-                    values.put(EmpDatabaseHelper.EMP_FNAME, editTextFName.getText().toString());
-                    values.put(EmpDatabaseHelper.EMP_LNAME, editTextLname.getText().toString());
-                    values.put(EmpDatabaseHelper.EMP_NIC, editTextNIC.getText().toString());
-                    values.put(EmpDatabaseHelper.EMP_JOB, editTextJob.getText().toString());
-                    values.put(EmpDatabaseHelper.EMP_EMAIL, editTextEMail.getText().toString());
-                    values.put(EmpDatabaseHelper.EMP_BDAY, editTextBDay.getText().toString());
-                    long newRowId = db.insert(EmpDatabaseHelper.TABLE_NAME, null, values);
+                    values.put(DatabaseHelper.EMP_FNAME, editTextFName.getText().toString());
+                    values.put(DatabaseHelper.EMP_LNAME, editTextLname.getText().toString());
+                    values.put(DatabaseHelper.EMP_NIC, editTextNIC.getText().toString());
+                    values.put(DatabaseHelper.EMP_JOB, editTextJob.getText().toString());
+                    values.put(DatabaseHelper.EMP_EMAIL, editTextEMail.getText().toString());
+                    values.put(DatabaseHelper.EMP_BDAY, editTextBDay.getText().toString());
+                    long newRowId = db.insert(DatabaseHelper.TABLE_NAME, null, values);
 
                     if (newRowId == 0) {
                         Toast.makeText(getApplicationContext(), "Data Not Inserted", Toast.LENGTH_SHORT).show();

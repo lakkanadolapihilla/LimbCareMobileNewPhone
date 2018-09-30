@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import static java.sql.Types.BLOB;
 
-public class EmpDatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "limbcare";
+public class DatabaseHelper extends SQLiteOpenHelper {
+    public static final String DATABASE_NAME = "limbcare3";
     public static final String TABLE_NAME = "employee";
     public static final String EMP_ID = "emp_id";
     public static final String EMP_FNAME = "emp_fname";
@@ -18,12 +18,20 @@ public class EmpDatabaseHelper extends SQLiteOpenHelper {
     public static final String EMP_BDAY = "emp_birthday";
     public static final String EMP_PHOTO = "emp_photo";
 
-    public EmpDatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 2);
+
+    public static final String NOTICE = "notice";
+    public static final String TOPIC = "topic";
+    public static final String DESCRIPTION = "description";
+    public static final String NOTICE_PHOTO = "notice_photo";
+
+    public DatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, 9);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+
         db.execSQL(" create table "+TABLE_NAME+" (" +
                 EMP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 EMP_FNAME + " TEXT, " +
@@ -33,6 +41,11 @@ public class EmpDatabaseHelper extends SQLiteOpenHelper {
                 EMP_EMAIL + " TEXT, " +
                 EMP_BDAY + " DATE, " +
                 EMP_PHOTO + " BLOB)");
+
+        db.execSQL(" create table "+NOTICE+" (" +
+                TOPIC + " TEXT, " +
+                DESCRIPTION + " TEXT, " +
+                NOTICE_PHOTO + " BLOB)");
 
 
 

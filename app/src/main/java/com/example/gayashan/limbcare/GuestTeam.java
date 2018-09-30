@@ -19,7 +19,7 @@ public class GuestTeam extends AppCompatActivity {
 
     private List<TeamCard> teamCardList;
 
-    EmpDatabaseHelper mHelper;
+    DatabaseHelper mHelper;
     TextView id, fname, lname, nic, job, email, birthday;
 
 
@@ -29,7 +29,7 @@ public class GuestTeam extends AppCompatActivity {
         setContentView(R.layout.activity_guest_team);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mHelper = new EmpDatabaseHelper(this);
+        mHelper = new DatabaseHelper(this);
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -67,16 +67,16 @@ public class GuestTeam extends AppCompatActivity {
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
         String[] projection = {
-                EmpDatabaseHelper.EMP_ID,
-                EmpDatabaseHelper.EMP_FNAME,
-                EmpDatabaseHelper.EMP_LNAME,
-                EmpDatabaseHelper.EMP_NIC,
-                EmpDatabaseHelper.EMP_JOB,
-                EmpDatabaseHelper.EMP_EMAIL,
-                EmpDatabaseHelper.EMP_BDAY,
+                DatabaseHelper.EMP_ID,
+                DatabaseHelper.EMP_FNAME,
+                DatabaseHelper.EMP_LNAME,
+                DatabaseHelper.EMP_NIC,
+                DatabaseHelper.EMP_JOB,
+                DatabaseHelper.EMP_EMAIL,
+                DatabaseHelper.EMP_BDAY,
         };
         Cursor cursor = db1.query(
-                EmpDatabaseHelper.TABLE_NAME,   // The table to query
+                DatabaseHelper.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 null,              // The columns for the WHERE clause
                 null,          // The values for the WHERE clause

@@ -34,7 +34,7 @@ public class AdminNoticeAdd extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EmpDatabaseHelper mHelper = new EmpDatabaseHelper(getApplicationContext());
+                DatabaseHelper mHelper = new DatabaseHelper(getApplicationContext());
 
                 SQLiteDatabase db = mHelper.getWritableDatabase();
 
@@ -42,9 +42,9 @@ public class AdminNoticeAdd extends AppCompatActivity {
                     Toast.makeText(AdminNoticeAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContentValues values = new ContentValues();
-                    values.put(NoticeDatabaseHelper.TOPIC, topic.getText().toString());
-                    values.put(NoticeDatabaseHelper.DESCRIPTION, description.getText().toString());
-                    long newRowId = db.insert(EmpDatabaseHelper.TABLE_NAME, null, values);
+                    values.put(DatabaseHelper.TOPIC, topic.getText().toString());
+                    values.put(DatabaseHelper.DESCRIPTION, description.getText().toString());
+                    long newRowId = db.insert(DatabaseHelper.NOTICE, null, values);
 
                     if (newRowId == 0) {
                         Toast.makeText(getApplicationContext(), "Data Not Inserted", Toast.LENGTH_SHORT).show();
