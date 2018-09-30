@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static java.sql.Types.BLOB;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "limbcare3";
+    public static final String DATABASE_NAME = "limbcare4";
     public static final String TABLE_NAME = "employee";
     public static final String EMP_ID = "emp_id";
     public static final String EMP_FNAME = "emp_fname";
@@ -20,12 +20,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public static final String NOTICE = "notice";
+    public static final String NOTICE_ID = "notice_id";
     public static final String TOPIC = "topic";
     public static final String DESCRIPTION = "description";
     public static final String NOTICE_PHOTO = "notice_photo";
 
+    public static final String GALLERY = "GALLERY";
+    public static final String GALLERY_ID = "galley_id";
+    public static final String GALLERY_TOPIC = "gallery_topic";
+    public static final String GALLERY_DESCRIPTION = "gallery_description";
+    public static final String GALLERY_PHOTO = "gallery_photo";
+
+    public static final String SERVICE = "service";
+    public static final String SERVICE_ID = "service_id";
+    public static final String SERVICE_TOPIC = "service_topic";
+    public static final String SERVICE_DESCRIPTION = "service_description";
+    public static final String SERVICE_PHOTO = "service_photo";
+
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 9);
+        super(context, DATABASE_NAME, null, 10);
     }
 
     @Override
@@ -43,9 +56,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EMP_PHOTO + " BLOB)");
 
         db.execSQL(" create table "+NOTICE+" (" +
+                NOTICE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 TOPIC + " TEXT, " +
                 DESCRIPTION + " TEXT, " +
                 NOTICE_PHOTO + " BLOB)");
+
+        db.execSQL(" create table "+GALLERY+" (" +
+                GALLERY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                GALLERY_TOPIC + " TEXT, " +
+                GALLERY_DESCRIPTION + " TEXT, " +
+                GALLERY_PHOTO + " BLOB)");
+
+        db.execSQL(" create table "+SERVICE+" (" +
+                SERVICE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                SERVICE_TOPIC + " TEXT, " +
+                SERVICE_DESCRIPTION + " TEXT, " +
+                SERVICE_PHOTO + " BLOB)");
 
 
 
