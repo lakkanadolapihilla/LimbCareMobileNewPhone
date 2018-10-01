@@ -50,7 +50,7 @@
         app:srcCompat="@drawable/artificiallogo" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
@@ -71,9 +71,17 @@
         app:layout_constraintVertical_bias="0.964"
         app:rippleColor="@android:color/black" />
 
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="195dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
     </android.support.constraint.ConstraintLayout>
-
-
 
     <android.support.design.widget.NavigationView
 

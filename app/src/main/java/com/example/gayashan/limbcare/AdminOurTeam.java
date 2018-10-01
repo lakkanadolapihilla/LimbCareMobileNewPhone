@@ -38,31 +38,9 @@ public class AdminOurTeam extends AppCompatActivity {
 
         teamCardList = new ArrayList<>();
 
-//        for (int i = 0; i<10;i++){
-//            TeamCard teamcards = new TeamCard(
-//                    "gaya",
-//                    "madu",
-//                    "jhwgsef",
-//                    "ksfje",
-//                    "iqrhf",
-//                    "aksjf");
-//
-//            teamCardList.add(teamcards);
-
-//
-//        }
-
         adapter = new TeamAdapter(teamCardList, this);
 
         recyclerView.setAdapter(adapter);
-//
-//        id = findViewById(R.id.)
-//        fname = findViewById(R.id.editText3);
-//        lname = findViewById(R.id.editText4);
-//        nic = findViewById(R.id.editText5);
-//        job = findViewById(R.id.editText6);
-//        email = findViewById(R.id.editText7);
-//        birthday = findViewById(R.id.editText8);
 
         FloatingActionButton fbtnourteam = findViewById(R.id.fab);
 
@@ -83,13 +61,6 @@ public class AdminOurTeam extends AppCompatActivity {
 
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
-//            id.setText(String.valueOf(cursor.getString(0)));
-//            fname.setText(String.valueOf(cursor.getString(1)));
-//            lname.setText(String.valueOf(cursor.getString(2)));
-//            nic.setText(String.valueOf(cursor.getString(3)));
-//            job.setText(String.valueOf(cursor.getString(4)));
-//            email.setText(String.valueOf(cursor.getString(5)));
-//            birthday.setText(String.valueOf(cursor.getString(6)));
             teamCardList.add(new TeamCard(cursor.getString(0), cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6)));
         }
         cursor.close();
@@ -97,8 +68,6 @@ public class AdminOurTeam extends AppCompatActivity {
 
     private Cursor retrieveAllData() {
         SQLiteDatabase db = mHelper.getReadableDatabase();
-        // Define a projection that specifies which columns from the database
-        // you will actually use after this query.
         String[] projection = {
                 DatabaseHelper.EMP_ID,
                 DatabaseHelper.EMP_FNAME,
@@ -108,14 +77,6 @@ public class AdminOurTeam extends AppCompatActivity {
                 DatabaseHelper.EMP_EMAIL,
                 DatabaseHelper.EMP_BDAY,
         };
-
-        // Filter results WHERE "title" = 'My Title'
-//        String selection = StudyMateContractor.NoteEntry.COLUMN_NAME_TITLE + " = ?";
-        //String[] selectionArgs = { "How to Code" };
-
-        // How you want the results sorted in the resulting Cursor
-//        String sortOrder =
-//                StudyMateContractor.NoteEntry._ID + " DESC";
 
         Cursor cursor = db.query(
                 DatabaseHelper.TABLE_NAME,   // The table to query

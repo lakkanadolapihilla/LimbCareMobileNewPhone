@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static java.sql.Types.BLOB;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "limbcare4";
+    public static final String DATABASE_NAME = "limbcare6";
     public static final String TABLE_NAME = "employee";
     public static final String EMP_ID = "emp_id";
     public static final String EMP_FNAME = "emp_fname";
@@ -26,19 +26,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String NOTICE_PHOTO = "notice_photo";
 
     public static final String GALLERY = "GALLERY";
-    public static final String GALLERY_ID = "galley_id";
-    public static final String GALLERY_TOPIC = "gallery_topic";
-    public static final String GALLERY_DESCRIPTION = "gallery_description";
-    public static final String GALLERY_PHOTO = "gallery_photo";
+    public static final String GALLERY_ID = "id";
+    public static final String GALLERY_TOPIC = "topic";
+    public static final String GALLERY_DESCRIPTION = "description";
+    public static final String GALLERY_PHOTO = "photo";
 
     public static final String SERVICE = "service";
-    public static final String SERVICE_ID = "service_id";
-    public static final String SERVICE_TOPIC = "service_topic";
-    public static final String SERVICE_DESCRIPTION = "service_description";
-    public static final String SERVICE_PHOTO = "service_photo";
+    public static final String SERVICE_ID = "id";
+    public static final String SERVICE_TOPIC = "topic";
+    public static final String SERVICE_DESCRIPTION = "description";
+    public static final String SERVICE_PHOTO = "photo";
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 10);
+        super(context, DATABASE_NAME, null, 12);
     }
 
     @Override
