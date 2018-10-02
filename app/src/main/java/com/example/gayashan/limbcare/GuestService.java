@@ -54,7 +54,7 @@ public class GuestService extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1)));
+            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
         }
         cursor.close();
     }

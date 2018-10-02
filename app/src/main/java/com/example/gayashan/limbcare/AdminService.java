@@ -64,7 +64,7 @@ public class AdminService extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1)));
+            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
         }
         cursor.close();
     }
@@ -74,8 +74,9 @@ public class AdminService extends AppCompatActivity {
 
 
         String[] projection1 = {
-                DatabaseHelper.TOPIC,
-                DatabaseHelper.DESCRIPTION,
+                DatabaseHelper.SERVICE_TOPIC,
+                DatabaseHelper.SERVICE_DESCRIPTION,
+                DatabaseHelper.SERVICE_PHOTO,
 
         };
 

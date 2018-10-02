@@ -1,11 +1,14 @@
 package adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gayashan.limbcare.R;
@@ -37,6 +40,9 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
         ServiceCard serviceCard = cardItems.get(position);
         holder.topic.setText(serviceCard.getTopic());
         holder.description.setText(serviceCard.getDescription());
+        byte[] foodImage = serviceCard.getImage();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
+        holder.imgService.setImageBitmap(bitmap);
     }
 
     @Override
@@ -48,12 +54,14 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
 
         public TextView topic;
         public TextView description;
+        public ImageView imgService;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             topic = itemView.findViewById(R.id.topic);
             description = itemView.findViewById(R.id.description);
+            imgService=itemView.findViewById(R.id.serviceSImage);
         }
     }
 }
