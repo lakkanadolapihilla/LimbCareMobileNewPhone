@@ -57,7 +57,7 @@ public class GuestTeam extends AppCompatActivity {
 //            job.setText(String.valueOf(cursor.getString(4)));
 //            email.setText(String.valueOf(cursor.getString(5)));
 //            birthday.setText(String.valueOf(cursor.getString(6)));
-            teamCardList.add(new TeamCard(cursor1.getString(0), cursor1.getString(1), cursor1.getString(2),cursor1.getString(3),cursor1.getString(4),cursor1.getString(5),cursor1.getString(6)));
+            teamCardList.add(new TeamCard(cursor1.getString(0), cursor1.getString(1), cursor1.getString(2),cursor1.getString(3),cursor1.getString(4),cursor1.getString(5),cursor1.getString(6),cursor1.getBlob(7)));
         }
         cursor1.close();
     }
