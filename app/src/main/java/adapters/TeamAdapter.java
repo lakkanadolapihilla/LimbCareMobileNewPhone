@@ -1,11 +1,14 @@
 package adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gayashan.limbcare.R;
@@ -41,6 +44,9 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder>{
         holder.job.setText(teamCard.getJob());
         holder.email.setText(teamCard.getEmail());
         holder.birthday.setText(teamCard.getBirthday());
+        byte[] foodImage = teamCard.getImage();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
+        holder.imgteams.setImageBitmap(bitmap);
     }
 
     @Override
@@ -56,6 +62,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder>{
         public TextView job;
         public TextView email;
         public TextView birthday;
+        public ImageView imgteams;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -67,6 +74,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder>{
             job = itemView.findViewById(R.id.job);
             email = itemView.findViewById(R.id.email);
             birthday = itemView.findViewById(R.id.birthday);
+            imgteams=itemView.findViewById(R.id.imgteams);
 
 
         }

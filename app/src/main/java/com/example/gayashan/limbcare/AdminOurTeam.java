@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class AdminOurTeam extends AppCompatActivity {
 
     DatabaseHelper mHelper;
     TextView id, fname, lname, nic, job, email, birthday;
+    ImageView imgteams;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +63,7 @@ public class AdminOurTeam extends AppCompatActivity {
 
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
-            teamCardList.add(new TeamCard(cursor.getString(0), cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6)));
+            teamCardList.add(new TeamCard(cursor.getString(0), cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6),cursor.getBlob(7)));
         }
         cursor.close();
     }
@@ -76,6 +78,7 @@ public class AdminOurTeam extends AppCompatActivity {
                 DatabaseHelper.EMP_JOB,
                 DatabaseHelper.EMP_EMAIL,
                 DatabaseHelper.EMP_BDAY,
+                DatabaseHelper.EMP_PHOTO
         };
 
         Cursor cursor = db.query(

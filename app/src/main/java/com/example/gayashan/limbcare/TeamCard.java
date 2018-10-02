@@ -10,8 +10,9 @@ public class TeamCard {
     private String job;
     private String email;
     private String birthday;
+    private byte[] imgteams;
 
-    public TeamCard(String id, String fname, String lname, String nic, String job, String email, String birthday) {
+    public TeamCard(String id, String fname, String lname, String nic, String job, String email, String birthday,byte[] imgteams) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
@@ -19,6 +20,7 @@ public class TeamCard {
         this.job = job;
         this.email = email;
         this.birthday = birthday;
+        this.imgteams=imgteams;
     }
 
     public String getId() {
@@ -47,6 +49,9 @@ public class TeamCard {
 
     public String getBirthday() {
         return birthday;
+    }
+    public byte[] getImage() {
+        return imgteams;
     }
 }
 
