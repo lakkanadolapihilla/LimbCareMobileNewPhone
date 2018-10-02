@@ -57,7 +57,7 @@ public class GuestNotice extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            noticeCardList.add(new NoticeCard(cursor.getString(0), cursor.getString(1)));
+            noticeCardList.add(new NoticeCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
         }
         cursor.close();
     }

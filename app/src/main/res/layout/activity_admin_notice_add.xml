@@ -126,7 +126,7 @@
             app:layout_constraintVertical_bias="0.3" />
 
         <Button
-            android:id="@+id/pickImage"
+            android:id="@+id/pickImagenote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
