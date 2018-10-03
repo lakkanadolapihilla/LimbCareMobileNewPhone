@@ -4,10 +4,12 @@ public class GalleryCard {
 
     private String topic;
     private String description;
+    private byte[] imgGalleryne;
 
-    public GalleryCard(String topic, String description){
+    public GalleryCard(String topic, String description,byte[] imgGallerynei){
         this.topic = topic;
         this.description = description;
+        this.imgGalleryne=imgGallerynei;
     }
 
     public String getTopic() {
@@ -16,5 +18,8 @@ public class GalleryCard {
 
     public String getDescription() {
         return description;
+    }
+    public byte[] getImage() {
+        return imgGalleryne;
     }
 }

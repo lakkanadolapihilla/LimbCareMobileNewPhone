@@ -74,6 +74,7 @@ public class GuestTeam extends AppCompatActivity {
                 DatabaseHelper.EMP_JOB,
                 DatabaseHelper.EMP_EMAIL,
                 DatabaseHelper.EMP_BDAY,
+                DatabaseHelper.EMP_PHOTO
         };
         Cursor cursor = db1.query(
                 DatabaseHelper.TABLE_NAME,   // The table to query

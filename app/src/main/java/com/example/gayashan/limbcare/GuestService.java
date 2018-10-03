@@ -66,6 +66,7 @@ public class GuestService extends AppCompatActivity {
         String[] projection1 = {
                 DatabaseHelper.TOPIC,
                 DatabaseHelper.DESCRIPTION,
+                DatabaseHelper.SERVICE_PHOTO
 
         };
 

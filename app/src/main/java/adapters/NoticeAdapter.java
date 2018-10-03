@@ -38,11 +38,11 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         NoticeCard noticeCard = cardItems.get(position);
-        holder.topic.setText(noticeCard.getTopic());
-        holder.description.setText(noticeCard.getDescription());
+        holder.topicNo.setText(noticeCard.getTopic());
+        holder.descriptionNo.setText(noticeCard.getDescription());
         byte[] foodImage = noticeCard.getImage();
         Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
-        holder.imgteamsnote.setImageBitmap(bitmap);
+        holder.imgNote.setImageBitmap(bitmap);
     }
 
     @Override
@@ -52,18 +52,18 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView topic;
-        public TextView description;
-        public ImageView imgteamsnote;
+        public TextView topicNo;
+        public TextView descriptionNo;
+        public ImageView imgNote;
 
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            topic = itemView.findViewById(R.id.topic);
-            description = itemView.findViewById(R.id.description);
-            imgteamsnote=itemView.findViewById(R.id.noticeImage);
+            topicNo = itemView.findViewById(R.id.topicNote);
+            descriptionNo = itemView.findViewById(R.id.descriptionNote);
+            imgNote=itemView.findViewById(R.id.noticeImage);
         }
     }
 }

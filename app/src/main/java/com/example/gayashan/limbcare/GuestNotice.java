@@ -69,6 +69,7 @@ public class GuestNotice extends AppCompatActivity {
         String[] projection1 = {
                 DatabaseHelper.TOPIC,
                 DatabaseHelper.DESCRIPTION,
+                DatabaseHelper.NOTICE_PHOTO
 
         };
 

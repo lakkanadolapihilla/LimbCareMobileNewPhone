@@ -27,11 +27,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:srcCompat="@mipmap/ic_launcher"/>/>
+                app:srcCompat="@mipmap/ic_launcher"/>
 
 
             <TextView
-                android:id="@+id/topic"
+                android:id="@+id/topicNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -39,7 +39,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/descriptionNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="4"

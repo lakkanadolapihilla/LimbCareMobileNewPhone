@@ -1,15 +1,17 @@
 package adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gayashan.limbcare.GalleryCard;
-import com.example.gayashan.limbcare.NoticeCard;
 import com.example.gayashan.limbcare.R;
 
 import java.util.List;
@@ -36,8 +38,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         GalleryCard galleryCard = cardItems.get(position);
-        holder.topic.setText(galleryCard.getTopic());
-        holder.description.setText(galleryCard.getDescription());
+        holder.Gallerytopic.setText(galleryCard.getTopic());
+        holder.Gallerydescription.setText(galleryCard.getDescription());
+
+        byte[] foodImage = galleryCard.getImage();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
+        holder.GalarysImagee.setImageBitmap(bitmap);
     }
     @Override
     public int getItemCount() {
@@ -46,14 +52,17 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView topic;
-        public TextView description;
+        public TextView Gallerytopic;
+        public TextView Gallerydescription;
+
+        public ImageView GalarysImagee;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            topic = itemView.findViewById(R.id.topic);
-            description = itemView.findViewById(R.id.description);
+            Gallerytopic = itemView.findViewById(R.id.topicnoteW);
+            Gallerydescription = itemView.findViewById(R.id.descriptionnoteW);
+            GalarysImagee= itemView.findViewById(R.id.galleryimageNEW);
         }
     }
 }

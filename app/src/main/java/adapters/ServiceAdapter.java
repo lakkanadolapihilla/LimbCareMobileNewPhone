@@ -38,8 +38,8 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         ServiceCard serviceCard = cardItems.get(position);
-        holder.topic.setText(serviceCard.getTopic());
-        holder.description.setText(serviceCard.getDescription());
+        holder.Sertopic.setText(serviceCard.getTopic());
+        holder.Serdescription.setText(serviceCard.getDescription());
         byte[] foodImage = serviceCard.getImage();
         Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
         holder.imgService.setImageBitmap(bitmap);
@@ -52,15 +52,15 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView topic;
-        public TextView description;
+        public TextView Sertopic;
+        public TextView Serdescription;
         public ImageView imgService;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            topic = itemView.findViewById(R.id.topic);
-            description = itemView.findViewById(R.id.description);
+            Sertopic = itemView.findViewById(R.id.topic);
+            Serdescription = itemView.findViewById(R.id.description);
             imgService=itemView.findViewById(R.id.serviceSImage);
         }
     }

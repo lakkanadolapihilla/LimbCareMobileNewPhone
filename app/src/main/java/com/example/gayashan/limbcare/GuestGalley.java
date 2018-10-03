@@ -45,25 +45,27 @@ public class GuestGalley extends AppCompatActivity {
     }
 
     @Override
+
     protected void onStart() {
         super.onStart();
 
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            galleryCardList.add(new GalleryCard(cursor.getString(0), cursor.getString(1)));
+            galleryCardList.add(new GalleryCard(cursor.getString(1), cursor.getString(2),cursor.getBlob(3)));
         }
         cursor.close();
     }
-
 
     private Cursor retrieveAllData() {
         SQLiteDatabase db = mHelper.getReadableDatabase();
 
 
         String[] projection1 = {
-                DatabaseHelper.TOPIC,
-                DatabaseHelper.DESCRIPTION,
+                DatabaseHelper.GALLERY_TOPIC,
+                DatabaseHelper.GALLERY_DESCRIPTION,
+                DatabaseHelper.GALLERY_PHOTO
+
 
         };
 

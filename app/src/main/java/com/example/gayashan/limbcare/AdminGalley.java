@@ -27,7 +27,6 @@ public class AdminGalley extends AppCompatActivity {
 
 
     DatabaseHelper mHelper;
-    TextView topic, description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +64,7 @@ public class AdminGalley extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            galleryCardList.add(new GalleryCard(cursor.getString(0), cursor.getString(1)));
+            galleryCardList.add(new GalleryCard(cursor.getString(1), cursor.getString(2),cursor.getBlob(3)));
         }
         cursor.close();
     }
@@ -76,8 +75,10 @@ public class AdminGalley extends AppCompatActivity {
 
 
         String[] projection1 = {
-                DatabaseHelper.TOPIC,
-                DatabaseHelper.DESCRIPTION,
+                DatabaseHelper.GALLERY_TOPIC,
+                DatabaseHelper.GALLERY_DESCRIPTION,
+                DatabaseHelper.GALLERY_PHOTO
+
 
         };
 

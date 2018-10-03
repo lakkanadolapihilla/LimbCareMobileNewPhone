@@ -69,7 +69,7 @@
         <EditText
             android:id="@+id/txtDescription"
             android:layout_width="321dp"
-            android:layout_height="165dp"
+            android:layout_height="70dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
@@ -85,7 +85,7 @@
             app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.548" />
+            app:layout_constraintVertical_bias="0.451" />
 
         <ImageView
             android:id="@+id/logo"
@@ -126,7 +126,7 @@
             app:layout_constraintVertical_bias="0.3" />
 
         <Button
-            android:id="@+id/pickImage"
+            android:id="@+id/pickImagegalary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -142,6 +142,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.774" />
+
+        <ImageView
+            android:id="@+id/imageViewGallery"
+            android:layout_width="111dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+            app:layout_constraintEnd_toStartOf="@+id/pickImage"
+            app:layout_constraintHorizontal_bias="0.353"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription"
+            app:layout_constraintVertical_bias="0.928"
+            app:srcCompat="@mipmap/ic_launcher" />
 
     </android.support.constraint.ConstraintLayout>
 
