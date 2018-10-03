@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static java.sql.Types.BLOB;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "limbcare10";
+    public static final String DATABASE_NAME = "limbcare13";
     public static final String TABLE_NAME = "employee";
     public static final String EMP_ID = "emp_id";
     public static final String EMP_FNAME = "emp_fname";

@@ -74,8 +74,6 @@ public class AdminGalleryAdd extends AppCompatActivity {
                     ContentValues values = new ContentValues();
                     values.put(DatabaseHelper.GALLERY_TOPIC, gallerytopic.getText().toString());
                     values.put(DatabaseHelper.GALLERY_DESCRIPTION, gellerydescription.getText().toString());
-                    values.put(DatabaseHelper.SERVICE_DESCRIPTION, imageViewToByte(imageViewGallery));
-
                     values.put(DatabaseHelper.GALLERY_PHOTO, imageViewToByte(imageViewGallery));
                     long newRowId = db.insert(DatabaseHelper.GALLERY, null, values);
 

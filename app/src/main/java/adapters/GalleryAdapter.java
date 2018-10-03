@@ -41,6 +41,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
         holder.Gallerytopic.setText(galleryCard.getTopic());
         holder.Gallerydescription.setText(galleryCard.getDescription());
 
+        holder.Galleryyid.setText(galleryCard.getIdgallery());
         byte[] foodImage = galleryCard.getImage();
         Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
         holder.GalarysImagee.setImageBitmap(bitmap);
@@ -52,6 +53,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public TextView Galleryyid;
         public TextView Gallerytopic;
         public TextView Gallerydescription;
 
@@ -60,6 +62,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
         public ViewHolder(View itemView) {
             super(itemView);
 
+            Galleryyid = itemView.findViewById(R.id.Galleryyid);
             Gallerytopic = itemView.findViewById(R.id.topicnoteW);
             Gallerydescription = itemView.findViewById(R.id.descriptionnoteW);
             GalarysImagee= itemView.findViewById(R.id.galleryimageNEW);

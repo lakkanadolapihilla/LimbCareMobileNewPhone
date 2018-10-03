@@ -52,7 +52,7 @@ public class GuestGalley extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            galleryCardList.add(new GalleryCard(cursor.getString(1), cursor.getString(2),cursor.getBlob(3)));
+            galleryCardList.add(new GalleryCard(cursor.getString(0),cursor.getString(1), cursor.getString(2),cursor.getBlob(3)));
         }
         cursor.close();
     }
@@ -62,6 +62,7 @@ public class GuestGalley extends AppCompatActivity {
 
 
         String[] projection1 = {
+                DatabaseHelper.GALLERY_ID,
                 DatabaseHelper.GALLERY_TOPIC,
                 DatabaseHelper.GALLERY_DESCRIPTION,
                 DatabaseHelper.GALLERY_PHOTO
