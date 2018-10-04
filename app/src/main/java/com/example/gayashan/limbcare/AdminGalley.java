@@ -75,13 +75,10 @@ public class AdminGalley extends AppCompatActivity {
 
 
         String[] projection1 = {
-
                 DatabaseHelper.GALLERY_ID,
                 DatabaseHelper.GALLERY_TOPIC,
                 DatabaseHelper.GALLERY_DESCRIPTION,
                 DatabaseHelper.GALLERY_PHOTO
-
-
         };
 
         Cursor cursor1 = db.query(
