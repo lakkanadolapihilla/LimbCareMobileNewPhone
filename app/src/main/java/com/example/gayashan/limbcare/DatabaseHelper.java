@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static java.sql.Types.BLOB;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "limbcare15";
+    public static final String DATABASE_NAME = "limbCare11";
     public static final String TABLE_NAME = "employee";
     public static final String EMP_ID = "emp_id";
     public static final String EMP_FNAME = "emp_fname";
@@ -23,6 +23,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String NOTICE = "notice";
     public static final String NOTICE_ID = "notice_id";
     public static final String TOPIC = "topic";
+    public static final String VENUE = "venue";
+    public static final String DATE = "date";
+    public static final String TIME = "time";
     public static final String DESCRIPTION = "description";
     public static final String NOTICE_PHOTO = "notice_photo";
 
@@ -35,7 +38,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String SERVICE = "service";
     public static final String SERVICE_ID = "id";
     public static final String SERVICE_TOPIC = "topic";
+    public static final String SERVICE_TYPE = "type";
     public static final String SERVICE_DESCRIPTION = "description";
+    public static final String SERVICE_PRICE = "price";
     public static final String SERVICE_PHOTO = "photo";
 
     public DatabaseHelper(Context context) {
@@ -59,6 +64,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(" create table "+NOTICE+" (" +
                 NOTICE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 TOPIC + " TEXT, " +
+                VENUE + " TEXT, " +
+                DATE + " TEXT, " +
+                TIME + " TEXT, " +
                 DESCRIPTION + " TEXT, " +
                 NOTICE_PHOTO + " BLOB)");
 
@@ -71,7 +79,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(" create table "+SERVICE+" (" +
                 SERVICE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 SERVICE_TOPIC + " TEXT, " +
+                SERVICE_TYPE + " TEXT, " +
                 SERVICE_DESCRIPTION + " TEXT, " +
+                SERVICE_PRICE + " TEXT, " +
                 SERVICE_PHOTO + " BLOB)");
 
 

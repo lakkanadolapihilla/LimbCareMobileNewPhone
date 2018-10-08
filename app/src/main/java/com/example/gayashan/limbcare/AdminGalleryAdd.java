@@ -70,7 +70,11 @@ public class AdminGalleryAdd extends AppCompatActivity {
 
                 if (gallerytopic.getText().toString().equals("") || gellerydescription.getText().toString().equals("")) {
                     Toast.makeText(AdminGalleryAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                if (gallerytopic.getText().toString().equals("")) {
+                    Toast.makeText(AdminGalleryAdd.this, "Topic Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     ContentValues values = new ContentValues();
                     values.put(DatabaseHelper.GALLERY_TOPIC, gallerytopic.getText().toString());
                     values.put(DatabaseHelper.GALLERY_DESCRIPTION, gellerydescription.getText().toString());

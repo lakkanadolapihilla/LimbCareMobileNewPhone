@@ -54,6 +54,24 @@ public class AdminService extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fbtnupdate = findViewById(R.id.fabupdate);
+
+        fbtnupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminService.this, UpdateService.class));
+            }
+        });
+
+        FloatingActionButton fbtndelete = findViewById(R.id.fabdelete);
+
+        fbtndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminService.this, DeleteService.class));
+            }
+        });
+
         mHelper = new DatabaseHelper(this);
     }
 
@@ -64,7 +82,7 @@ public class AdminService extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
+            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(4), cursor.getString(2), cursor.getString(3)));
         }
         cursor.close();
     }
@@ -75,7 +93,9 @@ public class AdminService extends AppCompatActivity {
 
         String[] projection1 = {
                 DatabaseHelper.SERVICE_TOPIC,
+                DatabaseHelper.SERVICE_TYPE,
                 DatabaseHelper.SERVICE_DESCRIPTION,
+                DatabaseHelper.SERVICE_PRICE,
                 DatabaseHelper.SERVICE_PHOTO,
 
         };

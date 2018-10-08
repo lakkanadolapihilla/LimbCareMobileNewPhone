@@ -54,6 +54,24 @@ public class AdminGalley extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fbtnupdate = findViewById(R.id.fabupdate);
+
+        fbtnupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminGalley.this, UpdateGallery.class));
+            }
+        });
+
+        FloatingActionButton fbtndelete = findViewById(R.id.fabdelete);
+
+        fbtndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminGalley.this, DeleteGallery.class));
+            }
+        });
+
         mHelper = new DatabaseHelper(this);
     }
 

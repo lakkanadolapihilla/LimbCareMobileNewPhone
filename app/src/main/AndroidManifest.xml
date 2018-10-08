@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gayashan.limbcare">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -92,15 +93,64 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gayashan.limbcare.AdminNoticeAdd" />
         </activity>
+
         <activity android:name=".AdminServiceAdd">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gayashan.limbcare.AdminServiceAdd" />
         </activity>
+
         <activity android:name=".AdminOurTeamAdd">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gayashan.limbcare.AdminOurTeamAdd" />
+        </activity>
+
+        <activity android:name=".UpdateTeam">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.gayashan.limbcare.AdminOurTeam"/>
+        </activity>
+
+        <activity android:name=".DeleteTeam"><meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.gayashan.limbcare.AdminOurTeam"/>
+        </activity>
+
+        <activity android:name=".UpdateService">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.AdminService"/>
+        </activity>
+
+        <activity android:name=".DeleteService">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.AdminService"/>
+        </activity>
+
+        <activity android:name=".UpdateGallery">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.AdminGalley"/>
+        </activity>
+
+        <activity android:name=".DeleteGallery">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.AdminGalley"/>
+        </activity>
+
+        <activity android:name=".UpdateNotice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.AdminNotice"/>
+        </activity>
+
+        <activity android:name=".DeleteNotice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gayashan.limbcare.AdminNotice"/>
         </activity>
     </application>
 

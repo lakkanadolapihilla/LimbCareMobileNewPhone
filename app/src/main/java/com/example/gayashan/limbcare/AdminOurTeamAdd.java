@@ -78,7 +78,21 @@ public class AdminOurTeamAdd extends AppCompatActivity {
 
                 if (editTextFName.getText().toString().equals("") || editTextLname.getText().toString().equals("") || editTextNIC.getText().toString().equals("") || editTextJob.getText().toString().equals("") || editTextEMail.getText().toString().equals("")|| editTextBDay.getText().toString().equals("")) {
                     Toast.makeText(AdminOurTeamAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+
+                if (editTextFName.getText().toString().equals("")){
+                    Toast.makeText(AdminOurTeamAdd.this, "First name Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (editTextLname.getText().toString().equals("")){
+                    Toast.makeText(AdminOurTeamAdd.this, "Last name Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (editTextNIC.getText().toString().equals("")){
+                    Toast.makeText(AdminOurTeamAdd.this, "NIC Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (editTextJob.getText().toString().equals("")){
+                    Toast.makeText(AdminOurTeamAdd.this, "Job tittle Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     ContentValues values = new ContentValues();
                     values.put(DatabaseHelper.EMP_FNAME, editTextFName.getText().toString());
                     values.put(DatabaseHelper.EMP_LNAME, editTextLname.getText().toString());

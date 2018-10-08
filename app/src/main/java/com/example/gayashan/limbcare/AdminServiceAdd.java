@@ -25,7 +25,7 @@ import java.io.InputStream;
 
 public class AdminServiceAdd extends AppCompatActivity {
 
-    EditText topic, description;
+    EditText topic, description,typeS,priceS;
     ImageView imageService;
     Button pickImageService;
 
@@ -49,6 +49,8 @@ public class AdminServiceAdd extends AppCompatActivity {
         description = findViewById(R.id.txtDescription);
         pickImageService= findViewById(R.id.pickImageService);
         imageService= findViewById(R.id.imageService);
+        priceS=findViewById(R.id.txtPrice);
+        typeS=findViewById(R.id.txtType);
         pickImageService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,10 +71,20 @@ public class AdminServiceAdd extends AppCompatActivity {
 
                 if (topic.getText().toString().equals("") || description.getText().toString().equals("")) {
                     Toast.makeText(AdminServiceAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                if (topic.getText().toString().equals("")){
+                    Toast.makeText(AdminServiceAdd.this, "Topic Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (priceS.getText().toString().equals("")){
+                    Toast.makeText(AdminServiceAdd.this, "Topic Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
                     ContentValues values = new ContentValues();
                     values.put(DatabaseHelper.SERVICE_TOPIC, topic.getText().toString());
                     values.put(DatabaseHelper.SERVICE_DESCRIPTION, description.getText().toString());
+                    values.put(DatabaseHelper.SERVICE_TYPE, typeS.getText().toString());
+                    values.put(DatabaseHelper.SERVICE_PRICE, priceS.getText().toString());
                     values.put(DatabaseHelper.SERVICE_PHOTO, imageViewToByte(imageService));
                     long newRowId = db.insert(DatabaseHelper.SERVICE, null, values);
 

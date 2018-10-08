@@ -25,7 +25,7 @@ import java.io.InputStream;
 
 public class AdminNoticeAdd extends AppCompatActivity {
 
-    EditText topic, description;
+    EditText topic, venue, date, time, description;
     Button pickImagenote;
     final int REQUEST_CODE_GALLERY = 999;
     ImageView picknoteimg;
@@ -46,6 +46,9 @@ public class AdminNoticeAdd extends AppCompatActivity {
         pickImagenote= findViewById(R.id.pickImagenote);
         Button btnAdd = findViewById(R.id.btnAdd);
         topic = findViewById(R.id.txtTopic);
+        venue = findViewById(R.id.txtVenue);
+        date = findViewById(R.id.txtDate);
+        time = findViewById(R.id.txtTime);
         description = findViewById(R.id.txtDescription);
         picknoteimg=findViewById(R.id.picknoteimg);
         pickImagenote.setOnClickListener(new View.OnClickListener() {
@@ -65,11 +68,30 @@ public class AdminNoticeAdd extends AppCompatActivity {
 
                 SQLiteDatabase db = mHelper.getWritableDatabase();
 
-                if (topic.getText().toString().equals("") || description.getText().toString().equals("")) {
+                if (topic.getText().toString().equals("") || description.getText().toString().equals("")||venue.getText().toString().equals("")||date.getText().toString().equals("")||time.getText().toString().equals("")) {
                     Toast.makeText(AdminNoticeAdd.this, "Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                if (topic.getText().toString().equals("")){
+                    Toast.makeText(AdminNoticeAdd.this, "Topic Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (description.getText().toString().equals("")){
+                    Toast.makeText(AdminNoticeAdd.this, "Description Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (venue.getText().toString().equals("")){
+                    Toast.makeText(AdminNoticeAdd.this, "Venue Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (time.getText().toString().equals("")){
+                    Toast.makeText(AdminNoticeAdd.this, "Time Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                if (date.getText().toString().equals("")){
+                    Toast.makeText(AdminNoticeAdd.this, "Date Fields Cannot be empty!", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     ContentValues values = new ContentValues();
                     values.put(DatabaseHelper.TOPIC, topic.getText().toString());
+                    values.put(DatabaseHelper.VENUE, venue.getText().toString());
+                    values.put(DatabaseHelper.DATE, date.getText().toString());
+                    values.put(DatabaseHelper.TIME, time.getText().toString());
                     values.put(DatabaseHelper.DESCRIPTION, description.getText().toString());
                     values.put(DatabaseHelper.NOTICE_PHOTO, imageViewToByte(picknoteimg));
                     long newRowId = db.insert(DatabaseHelper.NOTICE, null, values);

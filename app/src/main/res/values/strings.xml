@@ -12,7 +12,7 @@
     <string name="services_str">Services</string>
     <string name="notice_str">Notices</string>
     <string name="guest_home_str">Guest Home</string>
-    <string name="galley">Galley</string>
+    <string name="galley">Gallery</string>
     <string name="add_to_service_str">Add to Service</string>
     <string name="add_to_team_str">Add to Team</string>
     <string name="add_to_notice_str">Add to Notice</string>
@@ -29,9 +29,20 @@
     <string name="nic_str">NIC</string>
     <string name="last_name_str">Last Name</string>
     <string name="first_name_str">First Name</string>
-    <string name="email_str">Email</string>
-    <string name="birthday_str">Birthday</string>
+    <string name="email_str">E-mail</string>
+    <string name="birthday_str">Date of Birth</string>
     <string name="guest_login_str">Guest Login</string>
     <string name="pick_image_str">PICK IMAGE</string>
     <string name="add_to_gallery_str">Add to Gallery</string>
+    <string name="venue_str">Venue</string>
+    <string name="date_str">Date</string>
+    <string name="time_str">Time</string>
+    <string name="Price_str">Price</string>
+    <string name="Type_str">Type</string>
+    <string name="update_str">Update</string>
+    <string name="insert_id_for_update_str">Insert ID for Update</string>
+    <string name="get_details_str">GET DETAILS</string>
+    <string name="delete_str">Delete</string>
+    <string name="insert_id_for_delete_str">Insert ID for Delete</string>
+    <string name="note_str">NOTE:- This process cannot be Undone</string>
 </resources>

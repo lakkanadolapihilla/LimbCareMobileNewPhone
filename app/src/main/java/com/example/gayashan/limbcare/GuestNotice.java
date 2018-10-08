@@ -57,7 +57,7 @@ public class GuestNotice extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            noticeCardList.add(new NoticeCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
+            noticeCardList.add(new NoticeCard(cursor.getString(0), cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getBlob(5)));
         }
         cursor.close();
     }
@@ -68,6 +68,9 @@ public class GuestNotice extends AppCompatActivity {
 
         String[] projection1 = {
                 DatabaseHelper.TOPIC,
+                DatabaseHelper.VENUE,
+                DatabaseHelper.TIME,
+                DatabaseHelper.DATE,
                 DatabaseHelper.DESCRIPTION,
                 DatabaseHelper.NOTICE_PHOTO
 

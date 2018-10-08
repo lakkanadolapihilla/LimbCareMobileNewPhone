@@ -54,7 +54,7 @@ public class GuestService extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
 
-            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
+            serviceCardList.add(new ServiceCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(4), cursor.getString(2), cursor.getString(3)));
         }
         cursor.close();
     }
@@ -64,9 +64,11 @@ public class GuestService extends AppCompatActivity {
 
 
         String[] projection1 = {
-                DatabaseHelper.TOPIC,
-                DatabaseHelper.DESCRIPTION,
-                DatabaseHelper.SERVICE_PHOTO
+                DatabaseHelper.SERVICE_TOPIC,
+                DatabaseHelper.SERVICE_TYPE,
+                DatabaseHelper.SERVICE_DESCRIPTION,
+                DatabaseHelper.SERVICE_PRICE,
+                DatabaseHelper.SERVICE_PHOTO,
 
         };
 

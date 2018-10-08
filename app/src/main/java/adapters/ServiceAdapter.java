@@ -40,6 +40,9 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
         ServiceCard serviceCard = cardItems.get(position);
         holder.Sertopic.setText(serviceCard.getTopic());
         holder.Serdescription.setText(serviceCard.getDescription());
+
+        holder.Sertype.setText(serviceCard.getType());
+        holder.Serprice.setText(serviceCard.getPrice());
         byte[] foodImage = serviceCard.getImage();
         Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
         holder.imgService.setImageBitmap(bitmap);
@@ -54,12 +57,15 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
 
         public TextView Sertopic;
         public TextView Serdescription;
+        public TextView Sertype;
+        public TextView Serprice;
         public ImageView imgService;
 
         public ViewHolder(View itemView) {
             super(itemView);
-
+            Sertype= itemView.findViewById(R.id.type);
             Sertopic = itemView.findViewById(R.id.topic);
+            Serprice = itemView.findViewById(R.id.price);
             Serdescription = itemView.findViewById(R.id.description);
             imgService=itemView.findViewById(R.id.serviceSImage);
         }

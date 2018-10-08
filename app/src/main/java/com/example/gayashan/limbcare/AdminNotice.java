@@ -26,7 +26,7 @@ public class AdminNotice extends AppCompatActivity {
 
 
     DatabaseHelper mHelper;
-    TextView topic, description;
+    TextView topic, venue, date, time, description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,24 @@ public class AdminNotice extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fbtnupdate = findViewById(R.id.fabupdate);
+
+        fbtnupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminNotice.this, UpdateNotice.class));
+            }
+        });
+
+        FloatingActionButton fbtndelete = findViewById(R.id.fabdelete);
+
+        fbtndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminNotice.this, DeleteNotice.class));
+            }
+        });
+
         mHelper = new DatabaseHelper(this);
     }
 
@@ -61,12 +79,12 @@ public class AdminNotice extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        Cursor cursor = retrieveAllData();
-        while (cursor.moveToNext()) {
+        Cursor cursor2 = retrieveAllData();
+        while (cursor2.moveToNext()) {
 
-            noticeCardList.add(new NoticeCard(cursor.getString(0), cursor.getString(1),cursor.getBlob(2)));
+            noticeCardList.add(new NoticeCard(cursor2.getString(0), cursor2.getString(1),cursor2.getString(2),cursor2.getString(3),cursor2.getString(4),cursor2.getBlob(5)));
         }
-        cursor.close();
+        cursor2.close();
     }
 
     private Cursor retrieveAllData() {
@@ -75,6 +93,9 @@ public class AdminNotice extends AppCompatActivity {
 
         String[] projection1 = {
                 DatabaseHelper.TOPIC,
+                DatabaseHelper.VENUE,
+                DatabaseHelper.TIME,
+                DatabaseHelper.DATE,
                 DatabaseHelper.DESCRIPTION,
                 DatabaseHelper.NOTICE_PHOTO
 

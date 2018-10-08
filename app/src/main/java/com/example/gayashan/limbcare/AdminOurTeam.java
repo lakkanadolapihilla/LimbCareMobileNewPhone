@@ -27,6 +27,7 @@ public class AdminOurTeam extends AppCompatActivity {
     DatabaseHelper mHelper;
     TextView id, fname, lname, nic, job, email, birthday;
     ImageView imgteams;
+    public String IDEMP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +45,31 @@ public class AdminOurTeam extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
+
         FloatingActionButton fbtnourteam = findViewById(R.id.fab);
 
         fbtnourteam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AdminOurTeam.this, AdminOurTeamAdd.class));
+            }
+        });
+
+        FloatingActionButton fbtnupdate = findViewById(R.id.fabupdate);
+
+        fbtnupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminOurTeam.this, UpdateTeam.class));
+            }
+        });
+
+        FloatingActionButton fbtndelete = findViewById(R.id.fabdelete);
+
+        fbtndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminOurTeam.this, DeleteTeam.class));
             }
         });
 
@@ -64,7 +84,7 @@ public class AdminOurTeam extends AppCompatActivity {
         Cursor cursor = retrieveAllData();
         while (cursor.moveToNext()) {
             teamCardList.add(new TeamCard(cursor.getString(0), cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6),cursor.getBlob(7)));
-        }
+      }
         cursor.close();
     }
 
